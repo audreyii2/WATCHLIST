@@ -1,2 +1,2 @@
 # WATCHLIST
-See: github.io/audreyii2/WATCHLIST
+See: audreyii2.github.io/WATCHLIST
