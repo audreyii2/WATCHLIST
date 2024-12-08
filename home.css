@@ -1,4 +1,7 @@
 /*Structural*/
+ul[data-news] {
+    margin-top: 20px;
+}
 
 /*Pictures*/
 .intext-icon {
