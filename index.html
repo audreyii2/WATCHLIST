@@ -19,17 +19,54 @@
                 data-controller="Viewport">
                 <div class="sec1">
                     <h3 class="news-title vp-slide vp-slide--up">
-                        Audrey's Watchilist
+                        Audrey's Watchlist
                     </h3>
+
+                    <!-- Sorting and Filtering Controls -->
+                    <div>
+                        <label for="sort-by">Sort by: </label>
+                        <select id="sort-by">
+                            <option value="most-recent">Most Recent</option>
+                            <option value="running-time">Running Time</option>
+                            <option value="ratings">Comprehensive Ratings</option>
+                            <option value="watch-date">Watch Date</option>
+                            <option value="watch-count">Watch Count</option>
+                        </select>
+
+                        <br>
+
+                        <label for="rating-filter">Ratings: </label>
+                        <input type="checkbox" id="excellent" value="excellent"> Excellent
+                        <input type="checkbox" id="worthy" value="worthy"> Worthy
+                        <input type="checkbox" id="fair" value="fair"> Fair
+                        <input type="checkbox" id="substandard" value="substandard"> Substandard
+
+                        <br>
+
+                        <label for="date-filter">Date Watched: </label>
+                        <input type="checkbox" id="2-weeks" value="2-weeks"> ~2 weeks
+                        <input type="checkbox" id="2-months" value="2-months"> ~2 months
+                        <input type="checkbox" id="2-years" value="2-years"> ~2 years
+
+                        <br>
+
+                        <label for="count-filter">Watch Counts: </label>
+                        <input type="checkbox" id="twice" value="twice"> Twice
+                        <input type="checkbox" id="dozen" value="dozen"> >= 1 dozen
+                        <input type="checkbox" id="score" value="score"> >= 1 score
+                        <input type="checkbox" id="gross" value="gross"> >= 1 gross
+                    </div>
+
                     <ul class="row-flex news-grid" data-news="loaded" data-display-text="Keep reading >"
                         data-hidden-text="News article: ">
-                        <li class="column-flex column-flex-4 news-item">
-                            <article><a
-                                    aria-label="News article: Create your ideal campsite in Animal Crossing: Pocket Camp Complete—coming soon!"
-                                    data-background="squares-purple"
-                                    href="news/#!/mobilenews-create-your-ideal-campsite-in-animal-crossing-pocket-camp-complete-coming-soon">
-                                    <div class="news-article" aria-hidden="true"><span
-                                            class="news-article__date text-teal">
+                        <li class="column-flex column-flex-4 news-item" data-title="The Holiday" data-date="2024-11-08"
+                            data-imdb="7" data-rt="51" data-runtime="135" data-watchdates="2024-10-25,2024-11-03"
+                            data-comments="Enjoyed the holiday spirit">
+                            <article>
+                                <a aria-label="News article: Create your ideal campsite in Animal Crossing: Pocket Camp Complete—coming soon!"
+                                    data-background="squares-purple" href="#">
+                                    <div class="news-article" aria-hidden="true">
+                                        <span class="news-article__date text-teal">
                                             Nov 8, 2024
                                         </span>
                                         <span class="news-article__title">
@@ -47,52 +84,96 @@
                                             <div class="nl-runtime">
                                                 <img class="intext-icon-smaller"
                                                     src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/f2/33/64/f23364f6-7d6c-e473-5b19-a3b88d0e5a38/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/434x0w.webp">
-                                                2 hrs 15 min
+                                                2 hrs 15 mins
                                             </div>
                                         </span>
                                         <img class="news-article__thumb"
                                             src="https://i.ytimg.com/vi_webp/VMq3G0G_lnk/movieposter.webp"
-                                            alt="Cover Picture of The Holiday"><span class="news-article__more">Keep
+                                            alt="Cover Picture of TH"><span class="news-article__more">Keep
                                             reading &gt;</span>
                                     </div>
-                                </a></article>
+                                </a>
+                            </article>
                         </li>
-                        <li class="column-flex column-flex-4 news-item">
-                            <article><a
-                                    aria-label="News article: Eerie lanterns are aglow this Halloween in Animal Crossing: Pocket Camp"
-                                    data-background="triangles-green"
-                                    href="news/#!/mobilenews-eerie-lanterns-are-aglow-this-halloween-in-animal-crossing-pocket-camp">
-                                    <div class="news-article" aria-hidden="true"><span
-                                            class="news-article__date text-teal">Oct 08,
-                                            2024</span><span class="news-article__title">Eerie lanterns are aglow this
-                                            Halloween in
-                                            Animal
-                                            Crossing: Pocket Camp</span><img class="news-article__thumb"
-                                            src="https://assets.nintendo.com/image/upload/dpr_auto/q_auto/f_auto/c_pad,w_336/ncom/en_US/articles/2024/mobilenews-eerie-lanterns-are-aglow-this-halloween-in-animal-crossing-pocket-camp/Whats_New_1920x1080_ACPC_Halloween_N.com_Article"
-                                            alt=""><span class="news-article__more">Keep reading &gt;</span></div>
-                                </a></article>
+                        <li class="column-flex column-flex-4 news-item" data-title="The Holiday" data-date="2024-11-08"
+                            data-imdb="7" data-rt="51" data-runtime="135" data-watchdates="2024-10-25,2024-11-03"
+                            data-comments="Enjoyed the holiday spirit">
+                            <article>
+                                <a aria-label="News article: Create your ideal campsite in Animal Crossing: Pocket Camp Complete—coming soon!"
+                                    data-background="squares-purple" href="#">
+                                    <div class="news-article" aria-hidden="true">
+                                        <span class="news-article__date text-teal">
+                                            Oct 22, 2024
+                                        </span>
+                                        <span class="news-article__title">
+                                            <div class="nat-title">
+                                                Fellow Travelers
+                                            </div>
+                                            <div class="nl-rating">
+                                                <img class="intext-icon"
+                                                    src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Android_App_Icon._CB443386390_.png">
+                                                8.2/10
+                                                <img class="intext-icon"
+                                                    src="https://cdn3.emoji.gg/emojis/5248-rotten-tomatoes-critic-rotten.png">
+                                                90%
+                                            </div>
+                                            <div class="nl-runtime">
+                                                <img class="intext-icon-smaller"
+                                                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/f2/33/64/f23364f6-7d6c-e473-5b19-a3b88d0e5a38/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/434x0w.webp">
+                                                7 hrs 52 mins
+                                            </div>
+                                        </span>
+                                        <img class="news-article__thumb"
+                                            src="https://yt3.ggpht.com/yv3o-eC3bh8argjxZBoVaTxc71jA7tG4soVY9upAak_A4k0D40s9s-YTcXAVYGtvqiLuwf1l=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj"
+                                            alt="Cover Picture of FT"><span class="news-article__more">Keep
+                                            reading &gt;</span>
+                                    </div>
+                                </a>
+                            </article>
                         </li>
-                        <li class="column-flex column-flex-4 news-item">
-                            <article><a
-                                    aria-label="News article: Animal Crossing: New Horizons aquarium partnership expands into a national tour"
-                                    data-background="squares-blue"
-                                    href="news/#!/animal-crossing-new-horizons-aquarium-partnership-expands-into-a-national-tour">
-                                    <div class="news-article" aria-hidden="true"><span
-                                            class="news-article__date text-teal">Jun 10,
-                                            2024</span><span class="news-article__title">Animal Crossing: New Horizons
-                                            aquarium
-                                            partnership
-                                            expands into a national tour</span><img class="news-article__thumb"
-                                            src="https://assets.nintendo.com/image/upload/dpr_auto/q_auto/f_auto/c_pad,w_336/ncom/en_US/articles/2024/animal-crossing-new-horizons-aquarium-partnership-expands-into-a-national-tour/WN_2024_AC-Aquarium"
-                                            alt=""><span class="news-article__more">Keep reading &gt;</span></div>
-                                </a></article>
+                        <li class="column-flex column-flex-4 news-item" data-title="The Holiday" data-date="2024-11-08"
+                            data-imdb="7" data-rt="51" data-runtime="135" data-watchdates="2024-10-25,2024-11-03"
+                            data-comments="Enjoyed the holiday spirit">
+                            <article>
+                                <a aria-label="News article: Create your ideal campsite in Animal Crossing: Pocket Camp Complete—coming soon!"
+                                    data-background="squares-purple" href="#">
+                                    <div class="news-article" aria-hidden="true">
+                                        <span class="news-article__date text-teal">
+                                            Nov 8, 2024
+                                        </span>
+                                        <span class="news-article__title">
+                                            <div class="nat-title">
+                                                The Newsroom
+                                            </div>
+                                            <div class="nl-rating">
+                                                <img class="intext-icon"
+                                                    src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Android_App_Icon._CB443386390_.png">
+                                                8.6/10
+                                                <img class="intext-icon"
+                                                    src="https://cdn3.emoji.gg/emojis/5248-rotten-tomatoes-critic-rotten.png">
+                                                90%
+                                            </div>
+                                            <div class="nl-runtime">
+                                                <img class="intext-icon-smaller"
+                                                    src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/f2/33/64/f23364f6-7d6c-e473-5b19-a3b88d0e5a38/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/434x0w.webp">
+                                                25 hrs 20 mins
+                                            </div>
+                                        </span>
+                                        <img class="news-article__thumb"
+                                            src="https://yt3.ggpht.com/tiJmX1ndjzVW_RDFQFz3MhCKqia4zXCRORk_FEfb6ktOPUDLXSC26VzRqzpUHO7GdxkOQTOvwQ=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj"
+                                            alt="Cover Picture of TN"><span class="news-article__more">Keep
+                                            reading &gt;</span>
+                                    </div>
+                                </a>
+                            </article>
                         </li>
-                    </ul><a class="button button--red button--thin vp-pop"
+                    </ul>
+                    <a class="button button--red button--thin vp-pop"
                         data-metric="{ eVars: { 39: 'home: news: more' }, events: [53] }" href="news/">See all news</a>
                 </div>
             </section>
             <section
-                class="feature-image vp-onscreen vp-on-10 vp-onf-10 vp-on-20 vp-onf-20 vp-on-30 vp-onf-30 vp-on-40 vp-onf-40 vp-on-50 vp-onf-50 vp-on-60 vp-onf-60 vp-on-70 vp-onf-70 vp-on-80 vp-onf-80"
+                class="feature-image vp-onscreen vp-on-10 vp-onf-10 vp-on-20 vp-onf-20 vp-on-30 vp-onf-30 vp-on-40 vp-onf-40 vp-on-50 vp-onf-50 vp-on-60 vp-onf-60 vp-on-70 vp-onf-70 vp-on-80 vp-onf-80 vp-on-90 vp-onf-90 vp-on-100 vp-onf-100"
                 data-controller="Viewport">
                 <h2 class="visually-hidden">Main Feature</h2>
                 <div class="row-flex">
@@ -104,19 +185,19 @@
                             </nclood-video>
                         </div>
                     </div>
-                    <div class="column-flex-12 column-flex-large-10"><a class="feature-image__description-heading"
+                    <div class="column-flex-12 column-flex-large-10">
+                        <a class="feature-image__description-heading"
                             href="https://www.nintendo.com/games/detail/animal-crossing-new-horizons-switch/"
-                            data-metric="{ eVars:{39:'featured image:new horizons'}, events:[53] }"><span
-                                class="vp-slide vp-slide--up vp-delay-2" aria-hidden="true">Animal Crossing: New
-                                Horizons</span><span class="visually-hidden">Go to Animal Crossing: New Horizons game
-                                detail page.</span></a>
+                            data-metric="{ eVars:{39:'featured image:new horizons'}, events:[53] }">
+                            <span class="vp-slide vp-slide--up vp-delay-2" aria-hidden="true">Animal Crossing: New
+                                Horizons</span>
+                            <span class="visually-hidden">Go to Animal Crossing: New Horizons game detail page.</span>
+                        </a>
                         <p class="feature-image__description vp-slide vp-slide--up vp-delay-4">New to Animal Crossing:
-                            New
-                            Horizons? Come get the lay of the land and learn what to expect when you set out to create
-                            your
-                            own island paradise. If you’re an island life veteran already, we hope you will share this
-                            video with newcomers and welcome them with open arms!</p><a
-                            class="button button--red feature-image__link vp-pop vp-delay-6"
+                            New Horizons? Come get the lay of the land and learn what to expect when you set out to
+                            create your own island paradise. If you’re an island life veteran already, we hope you will
+                            share this video with newcomers and welcome them with open arms!</p>
+                        <a class="button button--red feature-image__link vp-pop vp-delay-6"
                             href="https://animalcrossing.nintendo.com/new-horizons/"
                             data-metric="{ eVars:{39:'featured link:new horizons'}, events:[53] }" target="_blank">Visit
                             the website</a>
@@ -128,6 +209,104 @@
     <footer>
 
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const showAllButton = document.getElementById('show-all');
+            const sortBySelect = document.getElementById('sort-by');
+            const ratingFilters = document.querySelectorAll('input[type="checkbox"][value*="rating"]');
+            const dateFilters = document.querySelectorAll('input[type="checkbox"][value*="date"]');
+            const countFilters = document.querySelectorAll('input[type="checkbox"][value*="count"]');
+
+            const ul = document.querySelector('.news-grid');
+            const lis = Array.from(ul.children);
+
+            const parseMovieData = (li) => {
+                return {
+                    li: li,
+                    title: li.getAttribute('data-title'),
+                    date: new Date(li.getAttribute('data-date')),
+                    rating: {
+                        imdb: parseFloat(li.getAttribute('data-imdb')),
+                        rt: parseFloat(li.getAttribute('data-rt'))
+                    },
+                    runtime: parseInt(li.getAttribute('data-runtime')),
+                    watchDates: li.getAttribute('data-watchdates').split(',').map(date => new Date(date)),
+                    comments: li.getAttribute('data-comments')
+                };
+            };
+
+            const movies = lis.map(parseMovieData);
+
+            function filterAndSortMovies(showAll = false) {
+                let filteredMovies = movies.slice();
+
+                // Filtering based on ratings
+                const ratingFilterValues = Array.from(ratingFilters).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+                if (ratingFilterValues.length > 0) {
+                    filteredMovies = filteredMovies.filter(movie => {
+                        const avgRating = (movie.rating.imdb + movie.rating.rt) / 2 * 10;
+                        if (ratingFilterValues.includes('excellent') && avgRating >= 82) {
+                            return true;
+                        }
+                        if (ratingFilterValues.includes('worthy') && avgRating < 82 && avgRating >= 64) {
+                            return true;
+                        }
+                        if (ratingFilterValues.includes('fair') && avgRating < 64 && avgRating >= 46) {
+                            return true;
+                        }
+                        if (ratingFilterValues.includes('substandard') && avgRating < 46) {
+                            return true;
+                        }
+                        return false;
+                    });
+                }
+
+                // Further implement date filtering 
+
+                // Filtering based on watch counts
+                //const countFilterValues = Array.from(countFilters).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+                // Further implement count filtering
+
+                // Only continue if there are movies to sort
+                // Sorting
+                switch (sortBySelect.value) {
+                    case 'running-time':
+                        filteredMovies = filteredMovies.sort((a, b) => a.runtime - b.runtime);
+                        break;
+                    case 'ratings':
+                        filteredMovies = filteredMovies.sort((a, b) => (b.rating.imdb + b.rating.rt) / 2 - (a.rating.imdb + a.rating.rt) / 2);
+                        break;
+                    case 'watch-date':
+                        filteredMovies = filteredMovies.sort((a, b) => Math.max(...b.watchDates) - Math.max(...a.watchDates));
+                        break;
+                    case 'watch-count':
+                        filteredMovies = filteredMovies.sort((a, b) => b.watchDates.length - a.watchDates.length);
+                        break;
+                    default:
+                        filteredMovies = filteredMovies.sort((a, b) => b.date - a.date);
+                        break;
+                }
+
+                renderMovies(showAll ? filteredMovies : filteredMovies.slice(0, 3)); // Show all movies or only 3 most recent watched movies by default
+            }
+
+            function renderMovies(movies) {
+                ul.innerHTML = ''; // Clear the current list
+                movies.forEach(movie => {
+                    ul.appendChild(movie.li);
+                });
+            }
+
+            sortBySelect.addEventListener('change', () => filterAndSortMovies(false));
+            ratingFilters.forEach(filter => filter.addEventListener('change', () => filterAndSortMovies(false)));
+            dateFilters.forEach(filter => filter.addEventListener('change', () => filterAndSortMovies(false)));
+            countFilters.forEach(filter => filter.addEventListener('change', () => filterAndSortMovies(false)));
+            showAllButton.addEventListener('click', () => filterAndSortMovies(true));
+
+            filterAndSortMovies(); // Initial render
+        });
+    </script>
 </body>
 
 </html>
