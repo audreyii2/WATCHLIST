@@ -1,0 +1,60 @@
+/*Structural*/
+
+/*Pictures*/
+.intext-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 16px;
+    margin-right: 8px;
+    vertical-align: bottom;
+}
+
+.intext-icon-smaller {
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    margin-right: 24px;
+    vertical-align: bottom;
+}
+
+/*Texts*/
+.nat-title {
+    font-size: 1.7rem;
+    color: #834b16;
+}
+
+.news-article__title {
+    color: #d57886;
+}
+
+.news-article__date {
+    font-size: 1rem;
+}
+
+.nl-rating {
+    color: #334488;
+    font-style: oblique;
+}
+
+/*Background*/
+.news-grid,
+.vp-slide,
+.sec1 {
+    background-color: #fbbb37;
+    background-image: url('https://animalcrossing.nintendo.com/assets/img/patterns/triangles-yellow-2x.png');
+    background-blend-mode: color-burn;
+    padding-top: 40px;
+    position: relative;
+    background-size: 80px auto;
+}
+
+.news-grid {
+    background-blend-mode: screen;
+    background-size: 170px auto;
+}
+
+.vp-slide {
+    border: solid 10px #b0b33a;
+    border-radius: 10px;
+    background-color: #ebec83;
+}
