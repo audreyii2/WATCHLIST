@@ -1,4 +1,11 @@
 /*Structural*/
+html {
+    background-color: pink;
+    background-image: url('https://animalcrossing.nintendo.com/assets/img/common/apple-border-top_2x.png');
+    background-blend-mode: color-burn;
+    background-size: 3500px;
+}
+
 ul[data-news] {
     margin-top: 20px;
 }
