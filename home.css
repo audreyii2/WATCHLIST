@@ -23,6 +23,11 @@
     color: #834b16;
 }
 
+.news-article__thumb {
+    margin-bottom: 12px;
+    margin-top: 24px;
+}
+
 .news-article__title {
     color: #d57886;
 }
@@ -44,6 +49,7 @@
     background-image: url('https://animalcrossing.nintendo.com/assets/img/patterns/triangles-yellow-2x.png');
     background-blend-mode: color-burn;
     padding-top: 40px;
+    padding-bottom: 30px;
     position: relative;
     background-size: 80px auto;
 }
@@ -54,7 +60,9 @@
 }
 
 .vp-slide {
+    margin-top: 40px;
     border: solid 10px #b0b33a;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 20px;
     background-color: #ebec83;
 }
