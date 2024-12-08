@@ -51,6 +51,11 @@ ul[data-news] {
     font-style: oblique;
 }
 
+.fancy-border, 
+.modal-content {
+    height: 32px;
+}
+
 /*Background*/
 .news-grid,
 .vp-slide,
